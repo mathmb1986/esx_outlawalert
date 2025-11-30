@@ -1,0 +1,69 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    overflow: hidden;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+.wanted-root {
+    position: absolute;
+    top: 2vh;
+    right: 20vh; /* déplacé vers la gauche */
+    pointer-events: none;
+}
+
+.hidden {
+    display: none;
+}
+
+/* Ligne d'étoiles */
+.wanted-stars {
+    display: flex;
+    gap: 6px;
+}
+
+/* Petite étoile */
+.wanted-star {
+    font-size: 26px;
+    font-weight: 900;
+    text-shadow: 0 0 6px rgba(0,0,0,0.8);
+}
+
+    /* étoile active */
+    .wanted-star.active {
+        color: #FFD700; /* or bright */
+    }
+
+    /* étoile vide */
+    .wanted-star.inactive {
+        color: rgba(255, 255, 255, 0.30);
+    }
+
+
+/* Texte "WANTED" */
+/* Animation clignotement / pulse */
+@keyframes wantedBlink {
+    0% {
+        transform: scale(1);
+        filter: brightness(1);
+    }
+
+    40% {
+        transform: scale(1.20);
+        filter: brightness(2);
+    }
+
+    100% {
+        transform: scale(1);
+        filter: brightness(1);
+    }
+}
+
+/* Appliquée aux étoiles lors du changement */
+.wanted-blink {
+    animation: wantedBlink 0.45s ease-out;
+}
