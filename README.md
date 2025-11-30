@@ -1,3 +1,5 @@
+Require sd-aipolice https://github.com/mathmb1986/sd-aipolice
+
 📦 esx_outlawalert – Amélioré & Compatible sd-aipolice
 Détection de délits + Alertes Police + UI Niveau de Recherche (NUI)
 
